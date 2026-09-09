@@ -87,12 +87,3 @@ src/
   main.jsx
   index.css          — CSS-переменные и базовые стили
 ```
-
-## Пароль администратора
-
-По умолчанию: `kurt_admin`
-
-Для смены пароля отредактируйте строку в `src/pages/IntroPage.jsx`:
-```js
-if (adminPassword === 'kurt_admin') {
-```
