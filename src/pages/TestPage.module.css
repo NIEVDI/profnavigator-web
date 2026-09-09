@@ -1,0 +1,222 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.counter {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.studentName {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.exitBtn {
+  background: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: color 0.12s, border-color 0.12s;
+}
+.exitBtn:hover { color: var(--danger); border-color: var(--danger); }
+
+.progressBar {
+  height: 4px;
+  background: var(--border);
+  width: 100%;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--teal-3, #25D6C0));
+  transition: width 0.35s var(--ease-out);
+  border-radius: 0 2px 2px 0;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 680px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 36px 40px 32px;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 560px) {
+  .card { padding: 24px 20px; }
+}
+
+.questionNum {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.question {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface-raised);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  text-align: left;
+  color: var(--text);
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  cursor: pointer;
+}
+.option:hover {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+.option:active { transform: scale(0.99); }
+
+.option.selected {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.optionNum {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.option.selected .optionNum {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.optionLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.error {
+  margin-top: 14px;
+  font-size: 0.83rem;
+  color: var(--danger);
+  font-weight: 500;
+}
+
+/* ── Nav bar ── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  position: sticky;
+  bottom: 0;
+  gap: 16px;
+}
+
+.backBtn {
+  background: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  transition: color 0.12s, border-color 0.12s;
+}
+.backBtn:hover { color: var(--text); border-color: var(--border-strong); }
+
+.dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 240px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  transition: background 0.2s, transform 0.2s;
+}
+.dot.dotDone { background: var(--accent); opacity: 0.5; }
+.dot.dotActive { background: var(--accent); transform: scale(1.4); opacity: 1; }
+
+.nextBtn {
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  transition: background 0.15s, opacity 0.15s, transform 0.1s;
+}
+.nextBtn:hover { background: var(--accent-hover); }
+.nextBtn:active { transform: scale(0.97); }
+.nextBtnDisabled { opacity: 0.45; }
