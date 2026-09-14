@@ -56,7 +56,7 @@
   background: var(--bg);
 }
 
-@media (prefers-color-scheme: light) {
+/*@media (prefers-color-scheme: light) {
   :root {
     --bg: var(--neu-0);
     --surface: var(--neu-1);
@@ -69,7 +69,7 @@
     --accent-hover: var(--acc-5);
     --accent-subtle: oklch(50% 0.24 var(--acc-hue) / 0.10);
   }
-}
+}*/
 
 html, body, #root { height: 100%; }
 
