@@ -73,7 +73,7 @@
 .tabActive {
   color: var(--accent);
   background: var(--accent-subtle);
-  border-color: color-mix(in oklch, var(--accent) 25%, transparent);
+  border-color: rgba(0, 130, 255, 0.25);
 }
 
 .body {
@@ -144,11 +144,11 @@
   font-weight: 600;
   padding: 6px 10px;
   border-radius: var(--radius-sm);
-  border: 1px solid color-mix(in oklch, var(--danger) 35%, transparent);
+  border: 1px solid rgba(230, 43, 52, 0.35);
   transition: background 0.12s;
   white-space: nowrap;
 }
-.dangerBtn:hover { background: color-mix(in oklch, var(--danger) 10%, transparent); }
+.dangerBtn:hover { background: rgba(230, 43, 52, 0.10); }
 
 .addBtn {
   background: none;
@@ -157,7 +157,7 @@
   font-weight: 700;
   padding: 5px 10px;
   border-radius: var(--radius-sm);
-  border: 1px solid color-mix(in oklch, var(--accent) 30%, transparent);
+  border: 1px solid rgba(0, 130, 255, 0.30);
   transition: background 0.12s;
   white-space: nowrap;
 }

@@ -122,8 +122,8 @@
 
 /* ── Mixed profile banner ── */
 .mixedBanner {
-  background: color-mix(in oklch, var(--warn, oklch(72% 0.18 80)) 12%, transparent);
-  border: 1px solid color-mix(in oklch, var(--warn, oklch(72% 0.18 80)) 30%, transparent);
+  background: rgba(222, 148, 0, 0.12);
+  border: 1px solid rgba(222, 148, 0, 0.30);
   border-radius: var(--radius-md);
   padding: 12px 16px;
   font-size: 0.875rem;
@@ -206,7 +206,7 @@
 }
 
 .barFillTeal {
-  background: var(--teal-3, oklch(72% 0.14 185));
+  background: var(--teal-3, #00c0b0);
 }
 
 .barVal {
@@ -268,8 +268,8 @@
 }
 .recCard:hover { border-color: var(--border-strong); }
 .recCardTop {
-  border-color: color-mix(in oklch, var(--accent) 35%, var(--border));
-  background: color-mix(in oklch, var(--accent) 4%, var(--surface));
+  border-color: #124271;
+  background: #0b131b;
 }
 .recCardOpen {
   border-color: var(--accent);
@@ -296,7 +296,7 @@
 
 .topStar {
   font-size: 1.1rem;
-  color: oklch(72% 0.18 80);
+  color: var(--warn, #de9400);
 }
 
 .rankNum {
@@ -443,8 +443,10 @@
   color: var(--accent);
   text-decoration: none;
   padding: 7px 14px;
-  border: 1px solid color-mix(in oklch, var(--accent) 30%, transparent);
+  border: 1px solid rgba(0, 130, 255, 0.30);
   border-radius: var(--radius-md);
+  width: auto;
+  align-self: flex-start;
   width: fit-content;
   transition: background 0.12s;
 }

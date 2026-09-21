@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   base: '/profnavigator-web/',
   build: {
-  target: 'es2015',              // Chrome 51+, Safari 10+, Firefox 54+, Edge 15+
-  cssTarget: 'chrome61',         // Современные CSS-функции с фоллбэками
-  polyfillDynamicImport: true,   // Поддержка динамических импортов
-}
-
+    // Поддерживаем старые браузеры с ES-модулями:
+    // Chrome 61+, Firefox 60+, Edge 16+, Safari 11+.
+    // Internet Explorer не поддерживается.
+    target: 'es2015',
+    cssTarget: 'chrome61',
+  },
 })
-
