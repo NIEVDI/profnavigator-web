@@ -268,8 +268,8 @@
 }
 .recCard:hover { border-color: var(--border-strong); }
 .recCardTop {
-  border-color: color-mix(in oklch, var(--accent) 35%, var(--border));
-  background: color-mix(in oklch, var(--accent) 4%, var(--surface));
+  border-color: #124271;
+  background: #0b131b;
 }
 .recCardOpen {
   border-color: var(--accent);
@@ -445,6 +445,8 @@
   padding: 7px 14px;
   border: 1px solid rgba(0, 130, 255, 0.30);
   border-radius: var(--radius-md);
+  width: auto;
+  align-self: flex-start;
   width: fit-content;
   transition: background 0.12s;
 }
